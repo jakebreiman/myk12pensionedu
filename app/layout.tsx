@@ -4,6 +4,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { UTMCapture } from "@/components/UTMCapture"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "MyFedPensionEdu.com — Federal Retirement Appointment Scheduling",
@@ -28,6 +29,7 @@ export default function RootLayout({
         </div>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
