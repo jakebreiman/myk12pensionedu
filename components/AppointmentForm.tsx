@@ -100,7 +100,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
           {/* Full Name */}
           <div>
-            <label htmlFor="fullName" className="block text-xs font-bold text-[#222] mb-1">
+            <label htmlFor="fullName" className="block text-base font-bold text-[#222] mb-1">
               Full Name <span className="text-[#c0392b]">*</span>
             </label>
             <input
@@ -116,7 +116,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           {/* Work Email + Personal Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label htmlFor="workEmail" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="workEmail" className="block text-base font-bold text-[#222] mb-1">
                 Work Email <span className="text-[#c0392b]">*</span>
               </label>
               <input
@@ -129,7 +129,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               <FieldError message={errors.workEmail?.message} />
             </div>
             <div>
-              <label htmlFor="personalEmail" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="personalEmail" className="block text-base font-bold text-[#222] mb-1">
                 Personal Email
               </label>
               <input
@@ -145,7 +145,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
           {/* Mobile Number */}
           <div>
-            <label htmlFor="mobileNumber" className="block text-xs font-bold text-[#222] mb-1">
+            <label htmlFor="mobileNumber" className="block text-base font-bold text-[#222] mb-1">
               Mobile Number <span className="text-[#c0392b]">*</span>
             </label>
             <input
@@ -160,7 +160,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
           {/* Agency / Employer */}
           <div>
-            <label htmlFor="agencyEmployer" className="block text-xs font-bold text-[#222] mb-1">
+            <label htmlFor="agencyEmployer" className="block text-base font-bold text-[#222] mb-1">
               Agency / Employer <span className="text-[#c0392b]">*</span>
             </label>
             <input
@@ -178,7 +178,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             <div>
               <label
                 htmlFor="departmentOffice"
-                className="block text-xs font-bold text-[#222] mb-1"
+                className="block text-base font-bold text-[#222] mb-1"
               >
                 Department / Office <span className="text-[#c0392b]">*</span>
               </label>
@@ -192,7 +192,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               <FieldError message={errors.departmentOffice?.message} />
             </div>
             <div>
-              <label htmlFor="jobTitle" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="jobTitle" className="block text-base font-bold text-[#222] mb-1">
                 Job Title
               </label>
               <input
@@ -208,7 +208,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           {/* State + Appointment Type */}
           <div className="grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-3">
             <div>
-              <label htmlFor="state" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="state" className="block text-base font-bold text-[#222] mb-1">
                 State <span className="text-[#c0392b]">*</span>
               </label>
               <select id="state" {...register("state")} className={selectClass}>
@@ -224,7 +224,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             <div>
               <label
                 htmlFor="appointmentType"
-                className="block text-xs font-bold text-[#222] mb-1"
+                className="block text-base font-bold text-[#222] mb-1"
               >
                 Appointment Type <span className="text-[#c0392b]">*</span>
               </label>
@@ -252,7 +252,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           {/* Meeting Date + Time + Timezone */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div>
-              <label htmlFor="meetingDate" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="meetingDate" className="block text-base font-bold text-[#222] mb-1">
                 Meeting Date <span className="text-[#c0392b]">*</span>
               </label>
               <input
@@ -264,7 +264,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               <FieldError message={errors.meetingDate?.message} />
             </div>
             <div>
-              <label htmlFor="meetingTime" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="meetingTime" className="block text-base font-bold text-[#222] mb-1">
                 Time <span className="text-[#c0392b]">*</span>
               </label>
               <select id="meetingTime" {...register("meetingTime")} className={selectClass}>
@@ -278,7 +278,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               <FieldError message={errors.meetingTime?.message} />
             </div>
             <div>
-              <label htmlFor="timezone" className="block text-xs font-bold text-[#222] mb-1">
+              <label htmlFor="timezone" className="block text-base font-bold text-[#222] mb-1">
                 Timezone <span className="text-[#c0392b]">*</span>
               </label>
               <select id="timezone" {...register("timezone")} className={selectClass}>
@@ -295,7 +295,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
           {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-xs font-bold text-[#222] mb-1">
+            <label htmlFor="message" className="block text-base font-bold text-[#222] mb-1">
               Message{" "}
               <span className="font-normal text-gray-500">(optional)</span>
             </label>

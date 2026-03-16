@@ -7,7 +7,7 @@ export function IntroCopy() {
           Complete the form below to schedule your federal retirement consultation.
         </p>
       </div>
-      <div className="space-y-3 text-base text-[#222] leading-relaxed text-center">
+      <div className="space-y-3 text-base text-[#222] leading-relaxed">
       <p>
         Book your one-on-one complimentary consultation regarding your federal retirement benefit
         questions.
