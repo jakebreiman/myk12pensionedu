@@ -23,7 +23,7 @@ export const appointmentSchema = z.object({
     .optional()
     .refine(
       (val) => !val || z.email().safeParse(val).success,
-      { error: "Please enter a valid email address" }
+      { message: "Please enter a valid email address" }
     ),
 
   mobileNumber: z
@@ -52,7 +52,8 @@ export const appointmentSchema = z.object({
     .string()
     .min(1, "Please select a meeting date")
     .refine((val) => {
-      const selected = new Date(val)
+      const [y, m, d] = val.split("-").map(Number)
+      const selected = new Date(y, m - 1, d) // local midnight — avoids UTC-vs-local mismatch
       const today = new Date()
       today.setHours(0, 0, 0, 0)
       return selected >= today
