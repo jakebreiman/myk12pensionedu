@@ -344,7 +344,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-[#205493] text-white text-xs uppercase tracking-widest py-3.5 disabled:opacity-60 cursor-pointer hover:bg-[#1a4478] transition-colors"
+            className="w-full bg-[#2e7d32] text-white text-xs uppercase tracking-widest py-3.5 disabled:opacity-60 cursor-pointer hover:bg-[#1b5e20] transition-colors"
           >
             {isSubmitting ? "Submitting..." : "Submit Request"}
           </button>
