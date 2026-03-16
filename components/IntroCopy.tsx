@@ -1,6 +1,6 @@
 export function IntroCopy() {
   return (
-    <div className="max-w-[620px] mx-auto px-5 pt-5">
+    <div className="px-5 py-5">
       <div className="bg-[#f4f7fb] border border-[#d0dcea] shadow-[0_2px_6px_rgba(32,84,147,0.08)] p-5 space-y-3 text-sm text-[#222] leading-relaxed">
         <p>
           Book your one-on-one complimentary consultation regarding your federal retirement benefit

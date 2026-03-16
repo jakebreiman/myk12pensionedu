@@ -83,7 +83,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
   }
 
   return (
-    <div className="max-w-[620px] mx-auto px-5 py-5 pb-8">
+    <div className="px-5 py-5 pb-8">
       <div className="border border-[#c8d8ea] bg-[#f8fbfe] p-5">
         <h2 className="text-[#205493] font-bold text-xs uppercase tracking-widest mb-4 pb-2 border-b border-[#c8d8ea]">
           Schedule Your Appointment

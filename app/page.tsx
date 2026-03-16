@@ -15,14 +15,14 @@ export default function Home() {
         title="Request an Appointment"
         subtitle="Complete the form below to schedule your federal retirement consultation."
       />
-      <main>
+      <main className="max-w-[980px] mx-auto">
         {submitted ? (
           <ThankYou />
         ) : (
-          <>
+          <div className="md:grid md:grid-cols-[320px_1fr] md:items-start">
             <IntroCopy />
             <AppointmentForm onSuccess={() => setSubmitted(true)} />
-          </>
+          </div>
         )}
       </main>
     </>
