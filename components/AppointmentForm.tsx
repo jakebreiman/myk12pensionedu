@@ -30,10 +30,10 @@ function FieldError({ message }: { message?: string }) {
 }
 
 const inputClass =
-  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base font-semibold focus:outline-none focus:border-[#205493]"
+  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base focus:outline-none focus:border-[#205493]"
 
 const selectClass =
-  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base font-semibold focus:outline-none focus:border-[#205493] cursor-pointer"
+  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base focus:outline-none focus:border-[#205493] cursor-pointer"
 
 interface AppointmentFormProps {
   onSuccess: () => void
@@ -93,7 +93,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
   return (
     <div className="px-5 py-5 pb-8">
       <div className="border border-[#c8d8ea] bg-[#f8fbfe] p-5">
-        <h2 className="text-[#205493] font-bold text-xs uppercase tracking-widest mb-4 pb-2 border-b border-[#c8d8ea]">
+        <h2 className="text-[#205493] font-bold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-[#c8d8ea] text-center">
           Schedule Your Appointment
         </h2>
 
@@ -304,7 +304,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               rows={4}
               placeholder="Please describe what you'd like to discuss. Include any concerns, goals, or questions you may have."
               {...register("message")}
-              className="w-full border border-[#a0b8cc] bg-white px-3 py-2 text-base font-semibold focus:outline-none focus:border-[#205493] resize-none"
+              className="w-full border border-[#a0b8cc] bg-white px-3 py-2 text-base focus:outline-none focus:border-[#205493] resize-none"
             />
             <FieldError message={errors.message?.message} />
           </div>
