@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import ReCAPTCHA from "react-google-recaptcha"
 import { appointmentSchema, type AppointmentFormData } from "@/lib/appointmentSchema"
 import {
   US_STATES,
@@ -40,6 +41,8 @@ interface AppointmentFormProps {
 
 export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
   const [formError, setFormError] = useState<string | null>(null)
+  const [captchaError, setCaptchaError] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
 
   const {
     register,
@@ -54,6 +57,14 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
   async function onSubmit(data: AppointmentFormData) {
     setFormError(null)
+    setCaptchaError(null)
+
+    const captchaToken = recaptchaRef.current?.getValue()
+    if (!captchaToken) {
+      setCaptchaError("Please complete the CAPTCHA verification.")
+      return
+    }
+
     try {
       // Collect UTM params from sessionStorage
       const utmParams: Record<string, string> = {}
@@ -62,7 +73,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
         if (value) utmParams[key] = value
       })
 
-      const payload = { ...data, ...utmParams }
+      const payload = { ...data, ...utmParams, captchaToken }
 
       // TODO: Meta Pixel — add fbq('track', 'Lead') on successful form submission
       // TODO: CRM sync — POST payload to GoHighLevel or HubSpot webhook
@@ -302,7 +313,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-[#e8f0fa] border border-[#b8cce4] px-4 py-3 text-xs text-[#333] leading-relaxed">
+          <div className="bg-[#e8f0fa] border border-[#b8cce4] px-4 py-3 text-xs text-[#333] leading-relaxed text-center">
             <strong>Notice:</strong> All licensed representatives are not employed by or affiliated
             with any federal agency, government pension program, or federal organization. Information
             provided during this appointment is for educational purposes only and does not constitute
@@ -318,7 +329,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
               className="mt-0.5 h-4 w-4 border border-[#a0b8cc] flex-shrink-0 cursor-pointer accent-[#205493]"
             />
             <label htmlFor="consent" className="text-xs text-[#444] leading-relaxed cursor-pointer">
-              By submitting this form you agree to our{" "}
+              By clicking Submit below you agree to our{" "}
               <a href="/privacy" className="text-[#205493] underline">
                 Privacy Policy
               </a>{" "}
@@ -330,6 +341,19 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             </label>
           </div>
           <FieldError message={errors.consent?.message} />
+
+          {/* reCAPTCHA */}
+          <div>
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
+            />
+            {captchaError && (
+              <p role="alert" className="text-[#c0392b] text-xs mt-1">
+                {captchaError}
+              </p>
+            )}
+          </div>
 
           {/* Form-level error */}
           {formError && (
