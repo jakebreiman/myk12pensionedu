@@ -19,7 +19,7 @@ export default function Home() {
         {submitted ? (
           <ThankYou />
         ) : (
-          <div className="md:grid md:grid-cols-[320px_1fr] md:items-start">
+          <div className="md:grid md:grid-cols-[2fr_3fr] md:items-start">
             <IntroCopy />
             <AppointmentForm onSuccess={() => setSubmitted(true)} />
           </div>
