@@ -9,120 +9,174 @@ export default function TermsPage() {
   return (
     <>
       <PageTitle title="Terms of Use" subtitle="Last Updated: January 2026" />
-      <main className="max-w-[620px] mx-auto px-5 py-8 text-sm text-[#222] leading-relaxed space-y-6">
+      <main className="max-w-[720px] mx-auto px-5 py-8 text-sm text-[#222] leading-relaxed space-y-6">
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">1. Acceptance of Terms</h2>
+          <p className="mb-3">
+            These Terms of Use govern access to websites operated by MyFedPensionEdu.com (&ldquo;MyFedPensionEdu&rdquo;). This agreement contains mandatory arbitration provisions that limit the remedies available to you in the event of a dispute.
+          </p>
+          <p className="mb-3">
+            By accessing MyFedPensionEdu.com and related services, you agree to be bound by these Terms. Users must be 18 years or older and represent having legal authority to accept this agreement.
+          </p>
           <p>
-            Users must be 18 or older to access this service. By using this site you agree to these
-            Terms of Use, including mandatory arbitration provisions that limit available remedies.
-            Continued use of the site indicates acceptance of any revised terms.
+            MyFedPensionEdu reserves the right to revise these Terms at any time with notice. Continued use of the services constitutes acceptance of any modifications. Users previously suspended or terminated may not access the services.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">2. User Registration</h2>
+          <p className="mb-3">
+            Certain service areas require you to provide accurate, current, and complete information. Each registration is for a single user. Users must maintain updated information and notify MyFedPensionEdu of any security breaches immediately.
+          </p>
           <p>
-            Users must provide accurate information and keep their details current. By submitting a
-            form, you agree to receive electronic and appointment-related communications. You may opt
-            out at any time.
+            Providing false or incomplete information may result in suspension or termination of access. By providing your information, you consent to receive electronic communications from MyFedPensionEdu, including promotional emails. You may unsubscribe from promotional messages at any time.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">3. SMS Program</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Opting into the SMS program means consenting to text messages about appointment requests, confirmations, and service-related communications.</li>
+            <li>You can cancel by replying &ldquo;STOP&rdquo; to any message; a confirmation will follow.</li>
+            <li>Replying &ldquo;HELP&rdquo; provides additional assistance.</li>
+            <li>Carriers are not responsible for delayed or undelivered messages.</li>
+            <li>Standard message and data rates may apply with varying frequency.</li>
+            <li>Privacy inquiries should reference the Privacy Policy.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">4. Appointments; Release of MyFedPensionEdu</h2>
+          <p className="mb-3">
+            The service enables licensed representatives to find and manage appointments with prospective clients. When requesting appointments, users become prospective clients and will receive confirmation via email or text.
+          </p>
+          <p className="mb-3">
+            MYFEDPENSIONEDU IS SOLELY AN APPOINTMENT SCHEDULING AND EDUCATIONAL RESOURCE AND IS NOT AFFILIATED WITH ANY AGENTS or product providers including any retirement, pension, or insurance companies.
+          </p>
           <p>
-            Users who opt in may receive appointment-related text messages. Reply <strong>STOP</strong> to
-            unsubscribe or <strong>HELP</strong> for assistance. Standard messaging rates may apply.
+            Representatives are solely responsible for their own conduct. Users release MyFedPensionEdu from any disputes with representatives or third parties concerning data accuracy or services provided.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">4. Appointments and Release</h2>
-          <p>
-            MyFedPensionEdu.com operates as an appointment scheduling and educational resource only.
-            It is not affiliated with any licensed agents or service providers. Users release
-            MyFedPensionEdu.com from any disputes arising with agents or third parties.
+          <h2 className="text-[#112e51] font-bold text-base mb-2">5. Right to Access and Use the MyFedPensionEdu Services and Content</h2>
+          <p className="mb-3">
+            All content, including logos, designs, text, graphics, and software, belongs to MyFedPensionEdu, its licensors, representatives, or users. Material is protected by copyright and international laws.
           </p>
+          <p className="mb-3">Users receive a limited, personal, revocable, non-exclusive, non-transferable right to access and use services for non-commercial purposes. Users may not:</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Sell or commercially use services or content;</li>
+            <li>Distribute, publicly perform, or display services or content;</li>
+            <li>Create derivative works;</li>
+            <li>Use data mining or extraction methods;</li>
+            <li>Download portions of the site without permission;</li>
+            <li>Stalk, threaten, or violate others&rsquo; rights;</li>
+            <li>Interfere with servers or networks; or</li>
+            <li>Use services for unintended purposes.</li>
+          </ul>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">5. Educational Purpose</h2>
-          <p>
-            All information provided through this website and during any scheduled appointment is
-            for educational purposes only. It does not constitute financial, legal, or investment
-            advice. All licensed representatives are independent and not employed by or affiliated
-            with any federal agency, government pension program, or government organization.
-          </p>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">6. Trademarks</h2>
+          <p>MyFedPensionEdu.com logos and product names are property of MyFedPensionEdu or owned by subsidiaries, affiliates, or third parties. Use requires prior written permission and cannot occur without explicit authorization.</p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">6. No Government Affiliation</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">7. Legal Requirements; Privacy Policy</h2>
           <p>
-            MyFedPensionEdu.com is an independent educational resource. It is not affiliated with,
-            endorsed by, or operated by the federal government, the Office of Personnel Management,
-            or any other government entity.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">7. Content Rights</h2>
-          <p>
-            Users receive a limited, non-exclusive license to access the site for personal use only.
-            MyFedPensionEdu.com retains all intellectual property rights to site content.
+            The Privacy Policy describes our handling of personal information. Details are available at{" "}
+            <a href="/privacy" className="text-[#205493] underline">MyFedPensionEdu.com/privacy</a>.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">8. User Content</h2>
+          <p className="mb-3">Users bear sole responsibility for all submitted data, information, and materials (&ldquo;User Content&rdquo;). MyFedPensionEdu has no liability for damages from third-party use or misuse of publicly available information.</p>
+          <p>Users must not submit content that is unlawful, harmful, threatening, abusive, hateful, obscene, harassing, defamatory, or otherwise objectionable, including material that infringes intellectual property or privacy rights, unsolicited advertising or spam, or software designed to disable or damage systems.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">9. Rights in User Content</h2>
+          <p>MyFedPensionEdu does not claim ownership of User Content. However, by uploading, posting, or submitting content, you grant MyFedPensionEdu a nonexclusive, royalty-free, worldwide, perpetual, irrevocable and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, perform, and publicly display such content for any purpose.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">10. Feedback</h2>
+          <p>Separate from User Content, any feedback — including questions, comments, suggestions, and ideas about services — becomes the property of MyFedPensionEdu. MyFedPensionEdu owns exclusive rights, including all intellectual property rights, and may use feedback without restriction for any purpose without acknowledgment or compensation.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">11. Third-Party Sites</h2>
+          <p>MyFedPensionEdu has not reviewed all linked websites and accepts no responsibility for third-party content, products, or services. Links do not constitute endorsement. Users access third-party sites at their own risk and must comply with associated terms.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">12. Indemnification</h2>
+          <p>Users must indemnify, hold harmless, and defend MyFedPensionEdu and affiliates from losses, damages, liabilities, and costs (including attorney fees) resulting from third-party claims relating to user conduct, use of services, User Content, Feedback, or violation of others&rsquo; rights.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">13. General Disclaimers</h2>
+          <p className="mb-3">
+            Services and content are provided &ldquo;as is,&rdquo; &ldquo;as available,&rdquo; and &ldquo;with all faults.&rdquo; MyFedPensionEdu makes no representations, warranties, or endorsements regarding services, content, or transmission security. All warranties — express, implied, merchantability, and fitness — are disclaimed.
+          </p>
           <p>
-            Users are solely responsible for any content they submit. We disclaim liability for
-            damages arising from misuse of submitted content by third parties.
+            MyFedPensionEdu is not involved in actual transactions between representatives and clients and cannot control information quality, safety, or legality. MyFedPensionEdu cannot confirm that representative information is truthful, accurate, or legally compliant.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">9. General Disclaimers</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">14. Limitation of Liability; Waiver</h2>
           <p>
-            Services are provided "as is" with no warranties. We do not control the quality or
-            accuracy of information provided by representatives and cannot confirm the truthfulness
-            of their communications.
+            To the fullest extent permitted by law, MyFedPensionEdu is not liable for indirect, special, incidental, or consequential damages including lost revenue, income, profits, or data. Maximum aggregate liability does not exceed one hundred dollars ($100) regardless of the nature or amount of damages claimed. This constitutes our sole liability.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">10. Liability Limits</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">15. Arbitration</h2>
+          <p className="mb-3">
+            Any dispute, claim, or controversy related to these Terms or services shall be decided by binding arbitration under American Arbitration Association rules governing consumer disputes. Arbitration uses a neutral arbitrator instead of a judge or jury. The Federal Arbitration Act governs interpretation and enforcement.
+          </p>
           <p>
-            Our maximum liability is capped at one hundred dollars ($100) regardless of the nature
-            or amount of damages claimed.
+            <strong>You and MyFedPensionEdu are each waiving the right to a trial by jury and/or to participate in a class action.</strong> Unless both parties agree otherwise, arbitrators cannot join claims or consolidate proceedings.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">11. Arbitration</h2>
-          <p>
-            All disputes shall be resolved through binding arbitration — not court proceedings.
-            By using this site, you waive your right to a jury trial and to participate in any
-            class action lawsuit.
-          </p>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">16. Class Action Waiver</h2>
+          <p>Regardless of forum, both parties agree that claims proceed only individually, not as class members or in representative proceedings.</p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">12. Governing Law</h2>
-          <p>
-            These Terms of Use are governed by applicable state law.
-          </p>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">17. Termination</h2>
+          <p>MyFedPensionEdu reserves the right, without notice and in its sole discretion, to terminate access at any time for any or no reason, with no resulting liability or obligation.</p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">13. Contact</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">18. Governing Law and Jurisdiction</h2>
+          <p>These Terms are governed by applicable state law, including statutes of limitations, excluding conflict or choice of law provisions.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">19. Severability</h2>
+          <p>If any term is held invalid or unenforceable, that provision is severable and does not affect the validity of the remaining Terms.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">20. Miscellaneous</h2>
+          <p>These Terms constitute the entire agreement regarding service access and use. Terms and rights cannot be transferred or assigned without written consent. MyFedPensionEdu&rsquo;s failure to assert any right does not constitute a waiver of such right. These Terms benefit only the parties and do not create third-party rights.</p>
+        </section>
+
+        <section>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">21. Contact Us</h2>
           <p>
-            For questions regarding these terms, please contact us through the appointment
-            scheduling form on the{" "}
+            For questions or concerns about these Terms, please contact us through the appointment scheduling form on the{" "}
             <a href="/" className="text-[#205493] underline">home page</a>.
           </p>
         </section>
 
+        <p className="text-gray-500 text-xs pt-4 border-t border-[#c8d8ea]">2026 Copyright MyFedPensionEdu.com All Rights Reserved</p>
       </main>
     </>
   )
