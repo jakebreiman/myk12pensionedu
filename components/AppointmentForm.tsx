@@ -92,7 +92,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
 
   return (
     <div className="px-5 py-5 pb-8">
-      <div className="border border-[#c8d8ea] bg-[#f8fbfe] p-5">
+      <div className="border border-[#c8d8ea] bg-[#f8fbfe] p-5 rounded-lg">
         <h2 className="text-[#205493] font-bold text-sm uppercase tracking-widest mb-4 pb-2 border-b border-[#c8d8ea] text-center">
           Schedule Your Appointment
         </h2>
@@ -245,7 +245,7 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           </div>
 
           {/* Scheduling separator */}
-          <p className="text-xs text-gray-500 border-t border-[#c8d8ea] pt-4">
+          <p className="text-xs text-gray-500 border-t border-[#c8d8ea] pt-4 text-center">
             Please select an appointment time from the available options below.
           </p>
 
