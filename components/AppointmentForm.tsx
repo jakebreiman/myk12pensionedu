@@ -45,23 +45,31 @@ function FieldError({ message }: { message?: string }) {
   )
 }
 
-function IconWrapper({ icon, children }: { icon: IconDefinition; children: React.ReactNode }) {
+function FieldLabel({
+  htmlFor,
+  icon,
+  required,
+  children,
+}: {
+  htmlFor: string
+  icon: IconDefinition
+  required?: boolean
+  children: React.ReactNode
+}) {
   return (
-    <div className="relative">
-      <FontAwesomeIcon
-        icon={icon}
-        className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7a90b8] w-4 h-4 pointer-events-none"
-      />
+    <label htmlFor={htmlFor} className="flex items-center gap-1.5 text-base font-bold text-[#222] mb-1">
+      <FontAwesomeIcon icon={icon} className="text-[#205493] w-4 h-4 flex-shrink-0" />
       {children}
-    </div>
+      {required && <span className="text-[#c0392b]">*</span>}
+    </label>
   )
 }
 
 const inputClass =
-  "w-full border border-[#a0b8cc] bg-white pl-9 pr-3 h-11 text-base focus:outline-none focus:border-[#205493]"
+  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base focus:outline-none focus:border-[#205493]"
 
 const selectClass =
-  "w-full border border-[#a0b8cc] bg-white pl-9 pr-3 h-11 text-base focus:outline-none focus:border-[#205493] cursor-pointer"
+  "w-full border border-[#a0b8cc] bg-white px-3 h-11 text-base focus:outline-none focus:border-[#205493] cursor-pointer"
 
 interface AppointmentFormProps {
   onSuccess: () => void
@@ -129,164 +137,122 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
           {/* Full Name */}
           <div>
-            <label htmlFor="fullName" className="block text-base font-bold text-[#222] mb-1">
-              Full Name <span className="text-[#c0392b]">*</span>
-            </label>
-            <IconWrapper icon={faUser}>
-              <input
-                id="fullName"
-                type="text"
-                placeholder="Your Full Name"
-                {...register("fullName")}
-                className={inputClass}
-              />
-            </IconWrapper>
+            <FieldLabel htmlFor="fullName" icon={faUser} required>Full Name</FieldLabel>
+            <input
+              id="fullName"
+              type="text"
+              placeholder="Your Full Name"
+              {...register("fullName")}
+              className={inputClass}
+            />
             <FieldError message={errors.fullName?.message} />
           </div>
 
           {/* Work Email + Personal Email */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label htmlFor="workEmail" className="block text-base font-bold text-[#222] mb-1">
-                Work Email <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faEnvelope}>
-                <input
-                  id="workEmail"
-                  type="email"
-                  placeholder="Your Work Email"
-                  {...register("workEmail")}
-                  className={inputClass}
-                />
-              </IconWrapper>
+              <FieldLabel htmlFor="workEmail" icon={faEnvelope} required>Work Email</FieldLabel>
+              <input
+                id="workEmail"
+                type="email"
+                placeholder="Your Work Email"
+                {...register("workEmail")}
+                className={inputClass}
+              />
               <FieldError message={errors.workEmail?.message} />
             </div>
             <div>
-              <label htmlFor="personalEmail" className="block text-base font-bold text-[#222] mb-1">
-                Personal Email
-              </label>
-              <IconWrapper icon={faEnvelope}>
-                <input
-                  id="personalEmail"
-                  type="email"
-                  placeholder="Your Personal Email"
-                  {...register("personalEmail")}
-                  className={inputClass}
-                />
-              </IconWrapper>
+              <FieldLabel htmlFor="personalEmail" icon={faEnvelope}>Personal Email</FieldLabel>
+              <input
+                id="personalEmail"
+                type="email"
+                placeholder="Your Personal Email"
+                {...register("personalEmail")}
+                className={inputClass}
+              />
               <FieldError message={errors.personalEmail?.message} />
             </div>
           </div>
 
           {/* Mobile Number */}
           <div>
-            <label htmlFor="mobileNumber" className="block text-base font-bold text-[#222] mb-1">
-              Mobile Number <span className="text-[#c0392b]">*</span>
-            </label>
-            <IconWrapper icon={faPhone}>
-              <input
-                id="mobileNumber"
-                type="tel"
-                placeholder="Your Mobile Number (e.g. 555-555-5555)"
-                {...register("mobileNumber")}
-                className={inputClass}
-              />
-            </IconWrapper>
+            <FieldLabel htmlFor="mobileNumber" icon={faPhone} required>Mobile Number</FieldLabel>
+            <input
+              id="mobileNumber"
+              type="tel"
+              placeholder="Your Mobile Number (e.g. 555-555-5555)"
+              {...register("mobileNumber")}
+              className={inputClass}
+            />
             <FieldError message={errors.mobileNumber?.message} />
           </div>
 
           {/* Agency / Employer */}
           <div>
-            <label htmlFor="agencyEmployer" className="block text-base font-bold text-[#222] mb-1">
-              Agency / Employer <span className="text-[#c0392b]">*</span>
-            </label>
-            <IconWrapper icon={faBuilding}>
-              <input
-                id="agencyEmployer"
-                type="text"
-                placeholder="Your Agency or Employer"
-                {...register("agencyEmployer")}
-                className={inputClass}
-              />
-            </IconWrapper>
+            <FieldLabel htmlFor="agencyEmployer" icon={faBuilding} required>Agency / Employer</FieldLabel>
+            <input
+              id="agencyEmployer"
+              type="text"
+              placeholder="Your Agency or Employer"
+              {...register("agencyEmployer")}
+              className={inputClass}
+            />
             <FieldError message={errors.agencyEmployer?.message} />
           </div>
 
           {/* Department / Office + Job Title */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label
-                htmlFor="departmentOffice"
-                className="block text-base font-bold text-[#222] mb-1"
-              >
-                Department / Office <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faSitemap}>
-                <input
-                  id="departmentOffice"
-                  type="text"
-                  placeholder="Your Department or Office"
-                  {...register("departmentOffice")}
-                  className={inputClass}
-                />
-              </IconWrapper>
+              <FieldLabel htmlFor="departmentOffice" icon={faSitemap} required>Department / Office</FieldLabel>
+              <input
+                id="departmentOffice"
+                type="text"
+                placeholder="Your Department or Office"
+                {...register("departmentOffice")}
+                className={inputClass}
+              />
               <FieldError message={errors.departmentOffice?.message} />
             </div>
             <div>
-              <label htmlFor="jobTitle" className="block text-base font-bold text-[#222] mb-1">
-                Job Title
-              </label>
-              <IconWrapper icon={faBriefcase}>
-                <input
-                  id="jobTitle"
-                  type="text"
-                  placeholder="Your Job Title"
-                  {...register("jobTitle")}
-                  className={inputClass}
-                />
-              </IconWrapper>
+              <FieldLabel htmlFor="jobTitle" icon={faBriefcase}>Job Title</FieldLabel>
+              <input
+                id="jobTitle"
+                type="text"
+                placeholder="Your Job Title"
+                {...register("jobTitle")}
+                className={inputClass}
+              />
             </div>
           </div>
 
           {/* State + Appointment Type */}
           <div className="grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-3">
             <div>
-              <label htmlFor="state" className="block text-base font-bold text-[#222] mb-1">
-                State <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faMapPin}>
-                <select id="state" {...register("state")} className={selectClass}>
-                  <option value="">Select State</option>
-                  {US_STATES.map((s) => (
-                    <option key={s.value} value={s.value}>
-                      {s.label}
-                    </option>
-                  ))}
-                </select>
-              </IconWrapper>
+              <FieldLabel htmlFor="state" icon={faMapPin} required>State</FieldLabel>
+              <select id="state" {...register("state")} className={selectClass}>
+                <option value="">Select State</option>
+                {US_STATES.map((s) => (
+                  <option key={s.value} value={s.value}>
+                    {s.label}
+                  </option>
+                ))}
+              </select>
               <FieldError message={errors.state?.message} />
             </div>
             <div>
-              <label
-                htmlFor="appointmentType"
-                className="block text-base font-bold text-[#222] mb-1"
+              <FieldLabel htmlFor="appointmentType" icon={faClipboardList} required>Appointment Type</FieldLabel>
+              <select
+                id="appointmentType"
+                {...register("appointmentType")}
+                className={selectClass}
               >
-                Appointment Type <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faClipboardList}>
-                <select
-                  id="appointmentType"
-                  {...register("appointmentType")}
-                  className={selectClass}
-                >
-                  <option value="">Select Type</option>
-                  {APPOINTMENT_TYPES.map((t) => (
-                    <option key={t.value} value={t.value}>
-                      {t.label}
-                    </option>
-                  ))}
-                </select>
-              </IconWrapper>
+                <option value="">Select Type</option>
+                {APPOINTMENT_TYPES.map((t) => (
+                  <option key={t.value} value={t.value}>
+                    {t.label}
+                  </option>
+                ))}
+              </select>
               <FieldError message={errors.appointmentType?.message} />
             </div>
           </div>
@@ -299,72 +265,53 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
           {/* Meeting Date + Time + Timezone */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div>
-              <label htmlFor="meetingDate" className="block text-base font-bold text-[#222] mb-1">
-                Meeting Date <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faCalendarDays}>
-                <input
-                  id="meetingDate"
-                  type="date"
-                  {...register("meetingDate")}
-                  className={inputClass}
-                />
-              </IconWrapper>
+              <FieldLabel htmlFor="meetingDate" icon={faCalendarDays} required>Meeting Date</FieldLabel>
+              <input
+                id="meetingDate"
+                type="date"
+                {...register("meetingDate")}
+                className={inputClass}
+              />
               <FieldError message={errors.meetingDate?.message} />
             </div>
             <div>
-              <label htmlFor="meetingTime" className="block text-base font-bold text-[#222] mb-1">
-                Time <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faClock}>
-                <select id="meetingTime" {...register("meetingTime")} className={selectClass}>
-                  <option value="">Select</option>
-                  {MEETING_TIMES.map((t) => (
-                    <option key={t} value={t}>
-                      {t}
-                    </option>
-                  ))}
-                </select>
-              </IconWrapper>
+              <FieldLabel htmlFor="meetingTime" icon={faClock} required>Time</FieldLabel>
+              <select id="meetingTime" {...register("meetingTime")} className={selectClass}>
+                <option value="">Select</option>
+                {MEETING_TIMES.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
+                ))}
+              </select>
               <FieldError message={errors.meetingTime?.message} />
             </div>
             <div>
-              <label htmlFor="timezone" className="block text-base font-bold text-[#222] mb-1">
-                Timezone <span className="text-[#c0392b]">*</span>
-              </label>
-              <IconWrapper icon={faGlobe}>
-                <select id="timezone" {...register("timezone")} className={selectClass}>
-                  <option value="">Select</option>
-                  {TIMEZONES.map((tz) => (
-                    <option key={tz.value} value={tz.value}>
-                      {tz.label}
-                    </option>
-                  ))}
-                </select>
-              </IconWrapper>
+              <FieldLabel htmlFor="timezone" icon={faGlobe} required>Timezone</FieldLabel>
+              <select id="timezone" {...register("timezone")} className={selectClass}>
+                <option value="">Select</option>
+                {TIMEZONES.map((tz) => (
+                  <option key={tz.value} value={tz.value}>
+                    {tz.label}
+                  </option>
+                ))}
+              </select>
               <FieldError message={errors.timezone?.message} />
             </div>
           </div>
 
           {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-base font-bold text-[#222] mb-1">
-              Message{" "}
-              <span className="font-normal text-gray-500">(optional)</span>
-            </label>
-            <div className="relative">
-              <FontAwesomeIcon
-                icon={faMessage}
-                className="absolute left-3 top-3.5 text-[#7a90b8] w-4 h-4 pointer-events-none"
-              />
-              <textarea
-                id="message"
-                rows={4}
-                placeholder="Please describe what you'd like to discuss. Include any concerns, goals, or questions you may have."
-                {...register("message")}
-                className="w-full border border-[#a0b8cc] bg-white pl-9 pr-3 py-2 text-base focus:outline-none focus:border-[#205493] resize-none"
-              />
-            </div>
+            <FieldLabel htmlFor="message" icon={faMessage}>
+              Message <span className="font-normal text-gray-500 text-sm">(optional)</span>
+            </FieldLabel>
+            <textarea
+              id="message"
+              rows={4}
+              placeholder="Please describe what you'd like to discuss. Include any concerns, goals, or questions you may have."
+              {...register("message")}
+              className="w-full border border-[#a0b8cc] bg-white px-3 py-2 text-base focus:outline-none focus:border-[#205493] resize-none"
+            />
             <FieldError message={errors.message?.message} />
           </div>
 
