@@ -71,12 +71,6 @@ export const appointmentSchema = z.object({
     .string()
     .max(1000, "Message must be 1000 characters or fewer")
     .optional(),
-
-  consent: z
-    .boolean()
-    .refine((val) => val === true, {
-      message: "You must agree to the Privacy Policy and Terms of Use to continue",
-    }),
 })
 
 export type AppointmentFormData = z.infer<typeof appointmentSchema>

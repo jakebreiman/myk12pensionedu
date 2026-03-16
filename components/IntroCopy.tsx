@@ -1,6 +1,11 @@
 export function IntroCopy() {
   return (
-    <div className="px-5 py-5 space-y-3 text-sm text-[#222] leading-relaxed">
+    <div className="px-5 py-5">
+      <h1 className="text-[#112e51] font-bold text-lg mb-1">Request an Appointment</h1>
+      <p className="text-gray-500 text-xs mb-4">
+        Complete the form below to schedule your federal retirement consultation.
+      </p>
+      <div className="space-y-3 text-sm text-[#222] leading-relaxed">
       <p>
         Book your one-on-one complimentary consultation regarding your federal retirement benefit
         questions.
@@ -14,6 +19,7 @@ export function IntroCopy() {
         Please indicate whether you prefer a phone call or Zoom teleconference in the notes
         section below. Please also confirm your direct cell phone number.
       </p>
+      </div>
     </div>
   )
 }

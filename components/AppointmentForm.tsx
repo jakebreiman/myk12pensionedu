@@ -50,9 +50,6 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
     formState: { errors, isSubmitting },
   } = useForm<AppointmentFormData>({
     resolver: zodResolver(appointmentSchema),
-    defaultValues: {
-      consent: false,
-    },
   })
 
   async function onSubmit(data: AppointmentFormData) {
@@ -320,30 +317,8 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             financial or legal advice.
           </div>
 
-          {/* Consent */}
-          <div className="flex items-start gap-2.5">
-            <input
-              id="consent"
-              type="checkbox"
-              {...register("consent")}
-              className="mt-0.5 h-4 w-4 border border-[#a0b8cc] flex-shrink-0 cursor-pointer accent-[#205493]"
-            />
-            <label htmlFor="consent" className="text-xs text-[#444] leading-relaxed cursor-pointer">
-              By clicking Submit below you agree to our{" "}
-              <a href="/privacy" className="text-[#205493] underline">
-                Privacy Policy
-              </a>{" "}
-              and{" "}
-              <a href="/terms" className="text-[#205493] underline">
-                Terms of Use
-              </a>
-              .
-            </label>
-          </div>
-          <FieldError message={errors.consent?.message} />
-
           {/* reCAPTCHA */}
-          <div>
+          <div className="flex flex-col items-center">
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}
