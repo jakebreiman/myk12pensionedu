@@ -309,14 +309,6 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             <FieldError message={errors.message?.message} />
           </div>
 
-          {/* Disclaimer */}
-          <div className="bg-[#e8f0fa] border border-[#b8cce4] px-4 py-3 text-xs text-[#333] leading-relaxed text-center">
-            <strong>Notice:</strong> All licensed representatives are not employed by or affiliated
-            with any federal agency, government pension program, or federal organization. Information
-            provided during this appointment is for educational purposes only and does not constitute
-            financial or legal advice.
-          </div>
-
           {/* reCAPTCHA */}
           <div className="flex flex-col items-center">
             <ReCAPTCHA
