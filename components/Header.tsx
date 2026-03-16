@@ -3,7 +3,7 @@ export function Header() {
     <header>
       {/* Logo block */}
       <div className="bg-white px-5 py-4 border-b-4 border-[#205493]">
-        <div className="max-w-[980px] mx-auto">
+        <div className="max-w-[980px] mx-auto pl-5">
           <div className="text-[#112e51] font-bold text-lg tracking-tight">
             MyFedPensionEdu
             <span className="font-normal text-gray-500">.com</span>

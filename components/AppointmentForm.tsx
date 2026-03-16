@@ -332,6 +332,14 @@ export function AppointmentForm({ onSuccess }: AppointmentFormProps) {
             </div>
           )}
 
+          {/* Agree text */}
+          <p className="text-xs text-[#555] text-center">
+            By clicking Submit below you agree to our{" "}
+            <a href="/privacy" className="text-[#205493] underline">Privacy Policy</a>{" "}
+            and{" "}
+            <a href="/terms" className="text-[#205493] underline">Terms of Use</a>.
+          </p>
+
           {/* Submit button */}
           <button
             type="submit"

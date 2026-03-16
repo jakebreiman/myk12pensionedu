@@ -11,13 +11,12 @@ export function Footer() {
             Terms of Use
           </a>
         </div>
-        <div className="flex justify-center items-center gap-2 text-[#dce4ef]">
-          <span aria-hidden="true">🔒</span>
-          <span>
-            An independent educational resource for federal employees — not affiliated with any
-            government agency
-          </span>
-        </div>
+        <p className="text-[#aabbd4] leading-relaxed">
+          <strong className="text-[#dce4ef]">Notice:</strong> All licensed representatives are not
+          employed by or affiliated with any federal agency, government pension program, or federal
+          organization. Information provided during this appointment is for educational purposes only
+          and does not constitute financial or legal advice.
+        </p>
       </div>
     </footer>
   )
