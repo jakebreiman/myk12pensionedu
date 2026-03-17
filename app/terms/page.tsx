@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { PageTitle } from "@/components/PageTitle"
 
 export const metadata: Metadata = {
-  title: "Terms of Use — MyFedPensionEdu.com",
+  title: "Terms of Use — MyK12PensionEdu.com",
 }
 
 export default function TermsPage() {
@@ -14,23 +14,23 @@ export default function TermsPage() {
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">1. Acceptance of Terms</h2>
           <p className="mb-3">
-            These Terms of Use govern access to websites operated by MyFedPensionEdu.com (&ldquo;MyFedPensionEdu&rdquo;). This agreement contains mandatory arbitration provisions that limit the remedies available to you in the event of a dispute.
+            These Terms of Use govern access to websites operated by MyK12PensionEdu.com (&ldquo;MyK12PensionEdu&rdquo;). This agreement contains mandatory arbitration provisions that limit the remedies available to you in the event of a dispute.
           </p>
           <p className="mb-3">
-            By accessing MyFedPensionEdu.com and related services, you agree to be bound by these Terms. Users must be 18 years or older and represent having legal authority to accept this agreement.
+            By accessing MyK12PensionEdu.com and related services, you agree to be bound by these Terms. Users must be 18 years or older and represent having legal authority to accept this agreement.
           </p>
           <p>
-            MyFedPensionEdu reserves the right to revise these Terms at any time with notice. Continued use of the services constitutes acceptance of any modifications. Users previously suspended or terminated may not access the services.
+            MyK12PensionEdu reserves the right to revise these Terms at any time with notice. Continued use of the services constitutes acceptance of any modifications. Users previously suspended or terminated may not access the services.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">2. User Registration</h2>
           <p className="mb-3">
-            Certain service areas require you to provide accurate, current, and complete information. Each registration is for a single user. Users must maintain updated information and notify MyFedPensionEdu of any security breaches immediately.
+            Certain service areas require you to provide accurate, current, and complete information. Each registration is for a single user. Users must maintain updated information and notify MyK12PensionEdu of any security breaches immediately.
           </p>
           <p>
-            Providing false or incomplete information may result in suspension or termination of access. By providing your information, you consent to receive electronic communications from MyFedPensionEdu, including promotional emails. You may unsubscribe from promotional messages at any time.
+            Providing false or incomplete information may result in suspension or termination of access. By providing your information, you consent to receive electronic communications from MyK12PensionEdu, including promotional emails. You may unsubscribe from promotional messages at any time.
           </p>
         </section>
 
@@ -47,22 +47,22 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">4. Appointments; Release of MyFedPensionEdu</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">4. Appointments; Release of MyK12PensionEdu</h2>
           <p className="mb-3">
             The service enables licensed representatives to find and manage appointments with prospective clients. When requesting appointments, users become prospective clients and will receive confirmation via email or text.
           </p>
           <p className="mb-3">
-            MYFEDPENSIONEDU IS SOLELY AN APPOINTMENT SCHEDULING AND EDUCATIONAL RESOURCE AND IS NOT AFFILIATED WITH ANY AGENTS or product providers including any retirement, pension, or insurance companies.
+            MYK12PENSIONEDU IS SOLELY AN APPOINTMENT SCHEDULING AND EDUCATIONAL RESOURCE AND IS NOT AFFILIATED WITH ANY AGENTS or product providers including any retirement, pension, or insurance companies.
           </p>
           <p>
-            Representatives are solely responsible for their own conduct. Users release MyFedPensionEdu from any disputes with representatives or third parties concerning data accuracy or services provided.
+            Representatives are solely responsible for their own conduct. Users release MyK12PensionEdu from any disputes with representatives or third parties concerning data accuracy or services provided.
           </p>
         </section>
 
         <section>
-          <h2 className="text-[#112e51] font-bold text-base mb-2">5. Right to Access and Use the MyFedPensionEdu Services and Content</h2>
+          <h2 className="text-[#112e51] font-bold text-base mb-2">5. Right to Access and Use the MyK12PensionEdu Services and Content</h2>
           <p className="mb-3">
-            All content, including logos, designs, text, graphics, and software, belongs to MyFedPensionEdu, its licensors, representatives, or users. Material is protected by copyright and international laws.
+            All content, including logos, designs, text, graphics, and software, belongs to MyK12PensionEdu, its licensors, representatives, or users. Material is protected by copyright and international laws.
           </p>
           <p className="mb-3">Users receive a limited, personal, revocable, non-exclusive, non-transferable right to access and use services for non-commercial purposes. Users may not:</p>
           <ul className="list-disc pl-5 space-y-1">
@@ -79,57 +79,57 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">6. Trademarks</h2>
-          <p>MyFedPensionEdu.com logos and product names are property of MyFedPensionEdu or owned by subsidiaries, affiliates, or third parties. Use requires prior written permission and cannot occur without explicit authorization.</p>
+          <p>MyK12PensionEdu.com logos and product names are property of MyK12PensionEdu or owned by subsidiaries, affiliates, or third parties. Use requires prior written permission and cannot occur without explicit authorization.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">7. Legal Requirements; Privacy Policy</h2>
           <p>
             The Privacy Policy describes our handling of personal information. Details are available at{" "}
-            <a href="/privacy" className="text-[#205493] underline">MyFedPensionEdu.com/privacy</a>.
+            <a href="/privacy" className="text-[#205493] underline">MyK12PensionEdu.com/privacy</a>.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">8. User Content</h2>
-          <p className="mb-3">Users bear sole responsibility for all submitted data, information, and materials (&ldquo;User Content&rdquo;). MyFedPensionEdu has no liability for damages from third-party use or misuse of publicly available information.</p>
+          <p className="mb-3">Users bear sole responsibility for all submitted data, information, and materials (&ldquo;User Content&rdquo;). MyK12PensionEdu has no liability for damages from third-party use or misuse of publicly available information.</p>
           <p>Users must not submit content that is unlawful, harmful, threatening, abusive, hateful, obscene, harassing, defamatory, or otherwise objectionable, including material that infringes intellectual property or privacy rights, unsolicited advertising or spam, or software designed to disable or damage systems.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">9. Rights in User Content</h2>
-          <p>MyFedPensionEdu does not claim ownership of User Content. However, by uploading, posting, or submitting content, you grant MyFedPensionEdu a nonexclusive, royalty-free, worldwide, perpetual, irrevocable and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, perform, and publicly display such content for any purpose.</p>
+          <p>MyK12PensionEdu does not claim ownership of User Content. However, by uploading, posting, or submitting content, you grant MyK12PensionEdu a nonexclusive, royalty-free, worldwide, perpetual, irrevocable and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, perform, and publicly display such content for any purpose.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">10. Feedback</h2>
-          <p>Separate from User Content, any feedback — including questions, comments, suggestions, and ideas about services — becomes the property of MyFedPensionEdu. MyFedPensionEdu owns exclusive rights, including all intellectual property rights, and may use feedback without restriction for any purpose without acknowledgment or compensation.</p>
+          <p>Separate from User Content, any feedback — including questions, comments, suggestions, and ideas about services — becomes the property of MyK12PensionEdu. MyK12PensionEdu owns exclusive rights, including all intellectual property rights, and may use feedback without restriction for any purpose without acknowledgment or compensation.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">11. Third-Party Sites</h2>
-          <p>MyFedPensionEdu has not reviewed all linked websites and accepts no responsibility for third-party content, products, or services. Links do not constitute endorsement. Users access third-party sites at their own risk and must comply with associated terms.</p>
+          <p>MyK12PensionEdu has not reviewed all linked websites and accepts no responsibility for third-party content, products, or services. Links do not constitute endorsement. Users access third-party sites at their own risk and must comply with associated terms.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">12. Indemnification</h2>
-          <p>Users must indemnify, hold harmless, and defend MyFedPensionEdu and affiliates from losses, damages, liabilities, and costs (including attorney fees) resulting from third-party claims relating to user conduct, use of services, User Content, Feedback, or violation of others&rsquo; rights.</p>
+          <p>Users must indemnify, hold harmless, and defend MyK12PensionEdu and affiliates from losses, damages, liabilities, and costs (including attorney fees) resulting from third-party claims relating to user conduct, use of services, User Content, Feedback, or violation of others&rsquo; rights.</p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">13. General Disclaimers</h2>
           <p className="mb-3">
-            Services and content are provided &ldquo;as is,&rdquo; &ldquo;as available,&rdquo; and &ldquo;with all faults.&rdquo; MyFedPensionEdu makes no representations, warranties, or endorsements regarding services, content, or transmission security. All warranties — express, implied, merchantability, and fitness — are disclaimed.
+            Services and content are provided &ldquo;as is,&rdquo; &ldquo;as available,&rdquo; and &ldquo;with all faults.&rdquo; MyK12PensionEdu makes no representations, warranties, or endorsements regarding services, content, or transmission security. All warranties — express, implied, merchantability, and fitness — are disclaimed.
           </p>
           <p>
-            MyFedPensionEdu is not involved in actual transactions between representatives and clients and cannot control information quality, safety, or legality. MyFedPensionEdu cannot confirm that representative information is truthful, accurate, or legally compliant.
+            MyK12PensionEdu is not involved in actual transactions between representatives and clients and cannot control information quality, safety, or legality. MyK12PensionEdu cannot confirm that representative information is truthful, accurate, or legally compliant.
           </p>
         </section>
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">14. Limitation of Liability; Waiver</h2>
           <p>
-            To the fullest extent permitted by law, MyFedPensionEdu is not liable for indirect, special, incidental, or consequential damages including lost revenue, income, profits, or data. Maximum aggregate liability does not exceed one hundred dollars ($100) regardless of the nature or amount of damages claimed. This constitutes our sole liability.
+            To the fullest extent permitted by law, MyK12PensionEdu is not liable for indirect, special, incidental, or consequential damages including lost revenue, income, profits, or data. Maximum aggregate liability does not exceed one hundred dollars ($100) regardless of the nature or amount of damages claimed. This constitutes our sole liability.
           </p>
         </section>
 
@@ -139,7 +139,7 @@ export default function TermsPage() {
             Any dispute, claim, or controversy related to these Terms or services shall be decided by binding arbitration under American Arbitration Association rules governing consumer disputes. Arbitration uses a neutral arbitrator instead of a judge or jury. The Federal Arbitration Act governs interpretation and enforcement.
           </p>
           <p>
-            <strong>You and MyFedPensionEdu are each waiving the right to a trial by jury and/or to participate in a class action.</strong> Unless both parties agree otherwise, arbitrators cannot join claims or consolidate proceedings.
+            <strong>You and MyK12PensionEdu are each waiving the right to a trial by jury and/or to participate in a class action.</strong> Unless both parties agree otherwise, arbitrators cannot join claims or consolidate proceedings.
           </p>
         </section>
 
@@ -150,7 +150,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">17. Termination</h2>
-          <p>MyFedPensionEdu reserves the right, without notice and in its sole discretion, to terminate access at any time for any or no reason, with no resulting liability or obligation.</p>
+          <p>MyK12PensionEdu reserves the right, without notice and in its sole discretion, to terminate access at any time for any or no reason, with no resulting liability or obligation.</p>
         </section>
 
         <section>
@@ -165,7 +165,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="text-[#112e51] font-bold text-base mb-2">20. Miscellaneous</h2>
-          <p>These Terms constitute the entire agreement regarding service access and use. Terms and rights cannot be transferred or assigned without written consent. MyFedPensionEdu&rsquo;s failure to assert any right does not constitute a waiver of such right. These Terms benefit only the parties and do not create third-party rights.</p>
+          <p>These Terms constitute the entire agreement regarding service access and use. Terms and rights cannot be transferred or assigned without written consent. MyK12PensionEdu&rsquo;s failure to assert any right does not constitute a waiver of such right. These Terms benefit only the parties and do not create third-party rights.</p>
         </section>
 
         <section>
@@ -176,7 +176,7 @@ export default function TermsPage() {
           </p>
         </section>
 
-        <p className="text-gray-500 text-xs pt-4 border-t border-[#c8d8ea]">2026 Copyright MyFedPensionEdu.com All Rights Reserved</p>
+        <p className="text-gray-500 text-xs pt-4 border-t border-[#c8d8ea]">2026 Copyright MyK12PensionEdu.com All Rights Reserved</p>
       </main>
     </>
   )
