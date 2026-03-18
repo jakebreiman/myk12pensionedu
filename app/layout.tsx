@@ -7,9 +7,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
-  title: "My Fed Pension Edu",
+  title: "My K12 Pension Edu",
   description:
-    "Schedule a one-on-one federal retirement consultation. Educational information for current and former federal employees.",
+    "Schedule a one-on-one pension consultation. Educational information for current and former K-12 school employees.",
 }
 
 export default function RootLayout({

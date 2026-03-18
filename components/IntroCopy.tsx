@@ -4,18 +4,18 @@ export function IntroCopy() {
       <div className="bg-[#f1f6fb] border border-[#c8d8ea] px-4 py-3 mb-4 text-center rounded-lg">
         <h1 className="text-[#112e51] font-bold text-xl">Request an Appointment</h1>
         <p className="text-gray-500 text-sm mt-1">
-          Learn more below to schedule your federal retirement consultation.
+          Learn more below to schedule your K-12 pension consultation.
         </p>
       </div>
       <div className="space-y-3 text-base text-[#222] leading-relaxed">
         <p>
-          Book your one-on-one complimentary consultation regarding your federal retirement benefit
+          Book your one-on-one complimentary consultation regarding your K-12 pension benefit
           questions.
         </p>
         <p>
           During your appointment you will receive educational information on how to best understand
-          your specific federal retirement options. You will also receive information about your
-          expected retirement income, benefit timing, and related considerations under FERS or CSRS.
+          your specific pension options. You will also receive information about your expected
+          retirement income, benefit timing, and related considerations under your state pension plan.
         </p>
         <p>
           Please indicate whether you prefer a phone call or Zoom teleconference in the notes
